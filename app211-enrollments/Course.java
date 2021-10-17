@@ -35,7 +35,7 @@ public class Course
     {
         printHeading();
         
-        System.out.println(" Course Code: " + code + ": " + title);
+        System.out.println(" Course Code: " +  code + ": " + title);
         System.out.println();
         
         module.print();
