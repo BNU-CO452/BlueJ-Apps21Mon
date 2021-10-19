@@ -19,7 +19,7 @@ public class Course
      
     public Course()
     {
-        this("G400", "BSc Computing");
+        this("BT1GDV1", "BSc Games Development");
     }
     
     /**
@@ -43,7 +43,12 @@ public class Course
      */
     public void createModules()
     {
-
+        Module co452 = new Module("CO452", "PC");
+        Module co453 = new Module("CO453", "AP");
+        Module co450 = new Module("CO450", "CA");
+        modules.add(co452);
+        modules.add(co453);
+        modules.add(co450);
     }
     
     public void addModule(Module module)
@@ -89,6 +94,10 @@ public class Course
      */
     public void printModules()
     {
-        System.out.println();
+        for (Module module : modules)
+        {
+            module.print();
+            module.printCredit();
+        }
     }
 }

@@ -24,7 +24,7 @@ public class Student
      */
     public Student()
     {
-        this("Derek", 12345678);
+        this("Jamie", 21037123);
     }
     
     /**
@@ -49,7 +49,7 @@ public class Student
      */
     public void awardMark(String moduleCode, int value)
     {
-
+        
     }
     
     /**
@@ -104,7 +104,10 @@ public class Student
     
     private void printModules()
     {
-
+        for(ModuleMark moduleMark: marks)
+        {
+            moduleMark.print();
+        }
     }
     
     public void printTranscript()
@@ -121,7 +124,8 @@ public class Student
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
         System.out.println(" Code \t Module \t\tCredit\t Mark \t Grade");
         System.out.println(" ---- \t -------------------- \t ------\t ---- \t -----");
-        
+       
+        printModules();
        
         Grades finalGrade = course.calculateGrade(marks);
         
