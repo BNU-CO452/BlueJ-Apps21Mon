@@ -43,11 +43,9 @@ public class Course
      */
     public void createModules()
     {
-        Module co452 = new Module("CO452", "PC");
-        Module co453 = new Module("CO453", "AP");
-        Module co450 = new Module("CO450", "CA");
+        Module co452 = new Module("CO452","Programming Concepts");
+        Module co450 = new Module("CO450", "Computer Architectures");
         modules.add(co452);
-        modules.add(co453);
         modules.add(co450);
     }
     
