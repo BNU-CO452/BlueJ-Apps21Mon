@@ -20,6 +20,8 @@ public class Course
     public Course()
     {
         this("BT1GDV1", "BSc Games Development");
+        modules = new ArrayList<Module>();
+        createModules();
     }
     
     /**
@@ -31,7 +33,7 @@ public class Course
         this.code = code;
         this.title = title;
         
-        modules  = new ArrayList<Module>();
+        modules = new ArrayList<Module>();
         
         createModules();
     }
@@ -43,10 +45,14 @@ public class Course
      */
     public void createModules()
     {
-        Module co452 = new Module("CO452","Programming Concepts");
+        Module co452 = new Module("CO452", "Programming Concepts");
+        Module co456 = new Module("CO456", "Web Programming");
         Module co450 = new Module("CO450", "Computer Architectures");
-        modules.add(co452);
-        modules.add(co450);
+        Module co454 = new Module("CO454", "Digi Tech");
+        addModule(co452);
+        addModule(co456);
+        addModule(co450);
+        addModule(co454);
     }
     
     public void addModule(Module module)
@@ -58,11 +64,23 @@ public class Course
     }
     
     /**
-     * 
+     * Convert a integer mark into a letter grade
+     * and return that grade as a value of the enum Grades
      */
     public Grades convertToGrade(int mark)
     {
-        return Grades.NS;
+        if(mark >= 0 && mark <= 39)
+            return Grades.F;
+        else if(mark <= 49)
+            return Grades.D;
+        else if(mark <= 59)
+            return Grades.C;
+        else if(mark <= 69)
+            return Grades.B;
+        else if(mark <= 100)
+            return Grades.A;
+        else
+            return Grades.NS;
     }
     
     /**
@@ -71,7 +89,15 @@ public class Course
      */
     public Grades calculateGrade(ArrayList<ModuleMark> marks)
     {
-        return Grades.NS;
+        int total = 0;
+        int finalMark = 0;
+        for(ModuleMark mark : marks)
+        {
+            total = total + mark.getValue();
+        }
+        finalMark = total / 4;
+        finalGrade = convertToGrade(finalMark);
+        return finalGrade;
     }
     
     /**
