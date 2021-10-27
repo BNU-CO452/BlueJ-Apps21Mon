@@ -20,8 +20,6 @@ public class Course
     public Course()
     {
         this("BT1GDV1", "BSc Games Development");
-        modules = new ArrayList<Module>();
-        createModules();
     }
     
     /**
@@ -45,14 +43,15 @@ public class Course
      */
     public void createModules()
     {
-        Module co452 = new Module("CO452", "Programming Concepts");
-        Module co456 = new Module("CO456", "Web Programming");
-        Module co450 = new Module("CO450", "Computer Architectures");
-        Module co454 = new Module("CO454", "Digi Tech");
+        Module co452 = new Module("CO452", "Programming Concepts"); 
+        Module co450 = new Module("CO450", "Computer Architectures"); 
+        Module co456 = new Module("CO456", "Web Programming       ");
+        Module co454 = new Module("CO456", "Digital Technology    ");
         addModule(co452);
-        addModule(co456);
         addModule(co450);
         addModule(co454);
+        addModule(co456);
+
     }
     
     public void addModule(Module module)
@@ -69,18 +68,20 @@ public class Course
      */
     public Grades convertToGrade(int mark)
     {
-        if(mark >= 0 && mark <= 39)
-            return Grades.F;
-        else if(mark <= 49)
-            return Grades.D;
-        else if(mark <= 59)
-            return Grades.C;
-        else if(mark <= 69)
-            return Grades.B;
-        else if(mark <= 100)
-            return Grades.A;
-        else
+        if (mark < 0)
             return Grades.NS;
+        else if (mark > 0 && mark <= 39)
+            return Grades.F;
+        else if (mark <= 49)
+            return Grades.D;
+        else if (mark <= 59)
+            return Grades.C;
+        else if (mark <= 69)
+            return Grades.B;
+        else if (mark <= 100)
+            return Grades.A; 
+        else
+           return Grades.NS;
     }
     
     /**
@@ -91,13 +92,13 @@ public class Course
     {
         int total = 0;
         int finalMark = 0;
-        for(ModuleMark mark : marks)
+        for (ModuleMark mark: marks)
         {
             total = total + mark.getValue();
         }
         finalMark = total / 4;
         finalGrade = convertToGrade(finalMark);
-        return finalGrade;
+       return finalGrade;
     }
     
     /**
