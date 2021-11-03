@@ -114,15 +114,6 @@ public class StockList
         }
     }
     
-    public void printProductByName(String productName)
-    {    
-        for(Product product : stock)
-        {
-            if(product.getName().toLowerCase().contains(productName.toLowerCase()))
-                 System.out.println(product.toString());
-        }
-    }
-    
     /**
      * Print out each product in the stock
      * in the order they are in the stock list
@@ -142,7 +133,7 @@ public class StockList
     public void printHeading()
     {
         System.out.println();
-        System.out.println(" Nick's Stock List");
+        System.out.println(" Peacock's Stock List");
         System.out.println(" ====================");
         System.out.println();
     }
