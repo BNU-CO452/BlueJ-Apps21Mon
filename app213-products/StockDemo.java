@@ -11,6 +11,8 @@ public class StockDemo
 {
     // The stock manager.
     private StockList stock;
+    
+    //private Random random;
 
     /**
      * Create a StockManager and populate it with at least
@@ -19,7 +21,7 @@ public class StockDemo
     public StockDemo(StockList stock)
     {
         this.stock = stock;
-
+        //this.random = new Random();
         // Add at least 10 products, they must be unique to you
         // Make sure the ids are sequential numbers
 
@@ -51,17 +53,16 @@ public class StockDemo
 
     private void buyProducts()
     {
-        stock.buyProduct(101, 921);
-        stock.buyProduct(102, 4);
-        stock.buyProduct(103, 50);
-        stock.buyProduct(104, 13);
+        stock.buyProduct(101, 912);
+        stock.buyProduct(102, 100);
+        stock.buyProduct(103, 48);
+        stock.buyProduct(104, 128);
     }
 
     private void sellProducts()
     {
-        stock.sellProduct(101);
-        stock.sellProduct(102, 920);
-        stock.sellProduct(104, 1001);
-        stock.sellProduct(100, 76);
+        stock.sellProduct(101, 123);
+        stock.sellProduct(102, 100);
+        stock.sellProduct(103, 500);
     }    
 }
