@@ -79,16 +79,22 @@ public class Course
     {
         System.out.println();
         System.out.println(" Course " + code + ": " + title);
-        //System.out.println();
+        System.out.println();
         
         printModules();
     }
     
     /**
-     * Print the course's four modules
+     * Print the course's four modules.
+     * NEEDS ADDING
      */
     public void printModules()
     {
-        System.out.println();
+        System.out.println("Module List");
+        
+        for(Module module : modules)
+        {
+            module.print();
+        }
     }
 }

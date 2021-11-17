@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="980aa30b-825c-4d41-ba29-15ed0708967f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app211-enrollments/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/app211-enrollments/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app212-grades/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/app212-grades/package.bluej" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app214-stock/InputReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/app214-stock/InputReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app214-stock/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/app214-stock/Program.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app214-stock/StockApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/app214-stock/StockApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app214-stock/package.bluej" beforeDir="false" afterPath="$PROJECT_DIR$/app214-stock/package.bluej" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
+  </component>
+  <component name="ProjectId" id="213UAl1PjL1ugfiDvrsYiJkwxmZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Repos" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="980aa30b-825c-4d41-ba29-15ed0708967f" name="Changes" comment="" />
+      <created>1637169125816</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637169125816</updated>
+      <workItem from="1637169131952" duration="96000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
