@@ -1,3 +1,4 @@
+package com.company;
 
 /**
  * This app provides a user interface to the
