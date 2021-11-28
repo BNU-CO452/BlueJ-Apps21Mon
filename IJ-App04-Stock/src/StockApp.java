@@ -62,12 +62,17 @@ public class StockApp
      */
     private void printMenuChoices()
     {
+        System.out.print(ConsoleColours.ANSI_BLUE);
+
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
         System.out.println("    Print:      Print all products");
         System.out.println("    Quit:       Quit the program");
-        System.out.println();        
+        System.out.println();
+
+        ConsoleColours.gotoxy(20,5);
+        System.out.print("Hello");
     }
     
     /**
@@ -75,9 +80,13 @@ public class StockApp
      */
     private void printHeading()
     {
+        System.out.print(ConsoleColours.ANSI_BRIGHT_BG_YELLOW );
+
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
-        System.out.println("      by Student Name");
+        System.out.println("      by Derek Peacock");
         System.out.println("********************************");
+
+        System.out.print(ConsoleColours.ANSI_BRIGHT_BG_WHITE);
     }
 }
