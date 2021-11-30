@@ -10,53 +10,53 @@
 public class StockApp
 {
     private InputReader reader;
-    
+
     private StockList stock;
-    
+
     /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
     {
         reader = new InputReader();
-        
+
         stock = new StockList();
         StockDemo demo = new StockDemo(stock);
     }
 
     /**
-     *  Display a list of menu choices and execute
-     *  the user's choice.
+     * Display a list of menu choices and execute
+     * the user's choice.
      */
     public void run()
     {
         boolean finished = false;
-        
-        while(!finished)
+
+        while (!finished)
         {
             printHeading();
             printMenuChoices();
-           
+
             String choice = reader.getString("Please enter your choice > ");
-            
+
             finished = executeChoice(choice.toLowerCase());
         }
     }
-    
+
     private boolean executeChoice(String choice)
     {
-        if(choice.equals("quit"))
+        if (choice.equals("quit"))
         {
             return true;
         }
-        else if(choice.equals("print"))
+        else if (choice.equals("print"))
         {
             stock.print();
         }
-        
+
         return false;
     }
-   
+
     /**
      * Print out a menu of operation choices
      */
@@ -71,16 +71,16 @@ public class StockApp
         System.out.println("    Quit:       Quit the program");
         System.out.println();
 
-        ConsoleColours.gotoxy(20,5);
+        ConsoleColours.gotoxy(20, 5);
         System.out.print("Hello");
     }
-    
+
     /**
      * Print the title of the program and the authors name
      */
     private void printHeading()
     {
-        System.out.print(ConsoleColours.ANSI_BRIGHT_BG_YELLOW );
+        System.out.print(ConsoleColours.ANSI_BRIGHT_BG_YELLOW);
 
         System.out.println("********************************");
         System.out.println("  App21-04: Stock Application ");
