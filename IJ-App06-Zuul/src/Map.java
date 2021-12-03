@@ -50,7 +50,7 @@ public class Map
      */
     private void createOutside()
     {
-        outside = new Location("outside the main entrance of the university");
+        outside = new Location(1,"outside the main entrance of the university");
         
     }
     
@@ -59,7 +59,7 @@ public class Map
      */
     private void createPub()
     {
-        pub = new Location("in the campus pub");
+        pub = new Location(2,"in the campus pub");
         
         pub.setExit("east", outside);
         outside.setExit("west", pub);
@@ -70,7 +70,7 @@ public class Map
      */
     private void createTheatre()
     {
-        theater = new Location("in a lecture theater");
+        theater = new Location(3,"in a lecture theater");
         
         theater.setExit("west", outside);
         outside.setExit("east", theater);
@@ -81,7 +81,7 @@ public class Map
      */
     private void createOffice()
     {
-        office = new Location("in the computing admin office");
+        office = new Location(4,"in the computing admin office");
         
     }
     
@@ -91,7 +91,7 @@ public class Map
     private void createLab()
     {
         // create the Locations
-        lab = new Location("in a computing lab");
+        lab = new Location(5,"in a computing lab");
         
         lab.setExit("east", office);
         office.setExit("west", lab);

@@ -1,6 +1,5 @@
 import java.util.Set;
 import java.util.HashMap;
-import java.util.Iterator;
 
 /**
  * Class Location - a location on the map of an adventure game.
@@ -19,7 +18,10 @@ import java.util.Iterator;
 
 public class Location 
 {
+    private int id;
+    private String shortDescription;
     private String description;
+    private Item item;
     private HashMap<String, Location> exits;        // stores exits of this room.
 
     /**
@@ -27,10 +29,15 @@ public class Location
      * no exits. "description" is something like "a kitchen" or
      * "an open court yard".
      */
-    public Location(String description) 
+    public Location(int id, String shortDescription)
+    {
+        this.shortDescription = shortDescription;
+        exits = new HashMap<>();
+    }
+
+    public void setDescription(String description)
     {
         this.description = description;
-        exits = new HashMap<>();
     }
 
     /**
@@ -43,13 +50,14 @@ public class Location
         exits.put(direction, neighbor);
     }
 
+
     /**
      * @return The short description of the room
      * (the one that was defined in the constructor).
      */
     public String getShortDescription()
     {
-        return description;
+        return getDescription();
     }
 
     /**
@@ -60,7 +68,7 @@ public class Location
      */
     public String getLongDescription()
     {
-        return " You are " + description + ".\n" + getExitString();
+        return " You are " + getDescription() + ".\n" + getExitString();
     }
 
     /**
@@ -88,6 +96,21 @@ public class Location
     public Location getExit(String direction) 
     {
         return exits.get(direction);
+    }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public Item getItem()
+    {
+        return item;
+    }
+
+    public void setItem(Item item)
+    {
+        this.item = item;
     }
 }
 
