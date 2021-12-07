@@ -1,4 +1,4 @@
-
+package com.company;
 /**
  * This command transfers the player from
  * one location to another location provided the

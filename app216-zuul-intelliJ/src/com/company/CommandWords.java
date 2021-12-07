@@ -1,4 +1,4 @@
-
+package com.company;
 /**
  * This contains all the possible command words
  * for the game of Zuul

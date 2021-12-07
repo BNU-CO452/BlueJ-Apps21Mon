@@ -1,3 +1,4 @@
+package com.company;
 /**
  * This class is part of the "World of Zuul" application. 
  * "World of Zuul" is a very simple, text based adventure game.  

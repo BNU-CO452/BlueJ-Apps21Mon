@@ -1,4 +1,4 @@
-
+package com.company;
 /**
  * This class is reponsible for creating and
  * linking all the Locations in the game to
@@ -51,7 +51,6 @@ public class Map
     private void createOutside()
     {
         outside = new Location("outside the main entrance of the university");
-        
     }
     
     /**

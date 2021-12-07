@@ -1,3 +1,4 @@
+package com.company;
 import java.util.ArrayList;
 /**
  * Write a description of class HelpCommand here.
