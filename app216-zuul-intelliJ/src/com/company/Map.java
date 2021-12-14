@@ -82,7 +82,9 @@ public class Map
     private void createOffice()
     {
         office = new Location("in the computing admin office");
-        
+
+        office.setExit("north", theater);
+        theater.setExit("south", office);
     }
     
     /**
