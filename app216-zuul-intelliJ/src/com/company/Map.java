@@ -7,14 +7,14 @@ package com.company;
  *  [Pub]<---->[Outside]<---->[Theatre]
  *                 |
  *          [Computer Lab]<---->[Office]
- *             
+ *
  * @author Derek Peacock and Nicholas Day
  * @version 2021-08-22
  */
 public class Map
 {
     // Need to add a list of exits
-    
+
     private Location outside, theater, pub, lab, office, server;
 
     private Location currentLocation;
@@ -44,7 +44,7 @@ public class Map
 
         currentLocation = outside;  // start game outside
     }
-    
+
     /**
      * Create the outside and link it to the
      * theatre, lab and pub
@@ -53,29 +53,29 @@ public class Map
     {
         outside = new Location("outside the main entrance of the university");
     }
-    
+
     /**
      * Create the pub and link it to the outside
      */
     private void createPub()
     {
         pub = new Location("in the campus pub");
-        
+
         pub.setExit("east", outside);
         outside.setExit("west", pub);
     }
-    
+
     /**
      * Create the theatre linked to the outside
      */
     private void createTheatre()
     {
         theater = new Location("in a lecture theater");
-        
+
         theater.setExit("west", outside);
         outside.setExit("east", theater);
     }
-    
+
     /**
      * Create the office linked to the lab
      */
@@ -86,7 +86,7 @@ public class Map
         office.setExit("north", theater);
         theater.setExit("south", office);
     }
-    
+
     /**
      * Create the lab and link it to the outside and office
      */
@@ -94,10 +94,10 @@ public class Map
     {
         // create the Locations
         lab = new Location("in a computing lab");
-        
+
         lab.setExit("east", office);
         office.setExit("west", lab);
-        
+
         lab.setExit("north", outside);
         outside.setExit("south", lab);
     }
@@ -108,14 +108,13 @@ public class Map
 
         server.setExit("east", lab);
         lab.setExit("west", server);
-
     }
 
     public Location getCurrentLocation()
     {
         return currentLocation;
     }
-    
+
     public void enterLocation(Location nextLocation)
     {
         currentLocation = nextLocation;
